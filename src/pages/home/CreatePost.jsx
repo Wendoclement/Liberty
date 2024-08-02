@@ -113,19 +113,28 @@ const CreatePost = () => {
         <div className="flex justify-between border-t py-2 border-t-gray-700">
           <div className="flex gap-3 items-center">
             <CiImageOn
+              title="Image"
               className="fill-primary w-6 h-6 cursor-pointer"
               onClick={() => imgRef.current.click()}
             />
-            <BsEmojiSmileFill className="fill-primary w-5 h-5 cursor-pointer" />
+            <BsEmojiSmileFill
+              title="Emoji😍"
+              className="fill-primary w-5 h-5 cursor-pointer"
+            />
             <TbVideo
+              title="Video"
               className="text-primary w-7 h-7 cursor-pointer"
               onClick={() => videoRef.current.click()}
             />
             <TbScript
+              title="Thread"
               className="text-primary w-6 h-6 cursor-pointer"
               onClick={handleThreadAdd}
             />
-            <TbMapPin className="text-primary w-6 h-6 cursor-pointer" />
+            <TbMapPin
+              title="Location"
+              className="text-primary w-6 h-6 cursor-pointer"
+            />
           </div>
           <input type="file" hidden ref={imgRef} onChange={handleImgChange} />
           <input
